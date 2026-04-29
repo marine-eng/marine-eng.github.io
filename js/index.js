@@ -145,11 +145,14 @@ loadProfiles();
         }
 
         // Close modal when clicking outside
-        document.getElementById('profileModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
+        const profileModal = document.getElementById('profileModal');
+        if (profileModal) {
+            profileModal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+        }
 
         // Close modal with Escape key
         document.addEventListener('keydown', function(e) {
@@ -222,3 +225,7 @@ loadProfiles();
                 });
             }
         }
+// Export for testing (Node.js / Jest)
+if (typeof module !== 'undefined') {
+    module.exports = { createStudentProfile, profileData };
+}
