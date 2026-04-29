@@ -72,7 +72,7 @@ function createProfessionalCards() {
     });
 }
 
-// ✅ Call the function to load profiles at page loadstyles index.html
+// ✅ Call the function to load profiles at page load
 loadProfiles();
 
 
